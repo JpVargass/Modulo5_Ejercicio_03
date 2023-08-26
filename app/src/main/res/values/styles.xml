@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="radioStyle">
+        <item name="android:textColor">@color/palb3</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ColorBt">
+        <item name="android:backgroundTint">@color/palb1</item>
+        <item name="android:textColor">@color/palb4</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

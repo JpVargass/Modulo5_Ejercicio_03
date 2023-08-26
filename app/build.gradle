@@ -26,11 +26,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
 
-    def nav_version = "2.6.0"
+    def nav_version = "2.7.1"
 
     // Java language implementation
     implementation "androidx.navigation:navigation-fragment:$nav_version"

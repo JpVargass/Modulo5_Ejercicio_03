@@ -7,7 +7,14 @@
     <color name="paleta3">#7AB8BF</color> // para fondos imagenes
     <color name="paleta4">#C4EEF2</color>
     <color name="paleta5">#A67458</color> // fondo de botones
-
+    <color name="pala1">#071952</color>
+    <color name="pala2">#0B666A</color>
+    <color name="pala3">#35A29F</color>
+    <color name="pala4">#97FEED</color>
+    <color name="palb1">#900C3F</color>
+    <color name="palb2">#C70039</color>
+    <color name="palb3">#F94C10</color>
+    <color name="palb4">#F8DE22</color>
 
 
 

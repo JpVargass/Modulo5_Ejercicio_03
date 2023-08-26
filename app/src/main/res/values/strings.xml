@@ -2,4 +2,8 @@
     <string name="app_name">Modulo5_Ejercicio_03</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Bienvenida">Bienvenidos a Logo Trivia, Ingresa tu nombre para comenzar...</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="EscribaNombre">Escribe tu Nombre</string>
+    <string name="QuePokemon">¿Cual es este pokemon?</string>
 </resources>
