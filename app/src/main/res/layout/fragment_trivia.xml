@@ -76,9 +76,19 @@
         android:layout_height="59dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="78dp"
-        android:text="Enviar"
+        android:text="@string/Enviar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupPokemon" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="333dp"
+        android:layout_height="268dp"
+        android:src="@drawable/fantasmita"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
