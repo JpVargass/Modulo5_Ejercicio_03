@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
-
-</Navigation>
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentName">
+    <fragment
+        android:id="@+id/fragmentName"
+        android:name="cl.jpvs.modulo5_ejercicio_03.FragmentName"
+        android:label="fragment_name"
+        tools:layout="@layout/fragment_name" >
+        <action
+            android:id="@+id/action_fragmentName_to_fragmentTrivia"
+            app:destination="@id/fragmentTrivia" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTrivia"
+        android:name="cl.jpvs.modulo5_ejercicio_03.TriviaFragment"
+        android:label="fragment_trivia"
+        tools:layout="@layout/fragment_trivia" >
+        <action
+            android:id="@+id/action_fragmentTrivia_to_fragmentRespuesta"
+            app:destination="@id/fragmentRespuesta" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRespuesta"
+        android:name="cl.jpvs.modulo5_ejercicio_03.FragmentRespuesta"
+        android:label="fragment_respuesta"
+        tools:layout="@layout/fragment_respuesta" >
+        <action
+            android:id="@+id/action_fragmentRespuesta_to_fragmentTrivia"
+            app:destination="@id/fragmentTrivia" />
+    </fragment>
+</navigation>
