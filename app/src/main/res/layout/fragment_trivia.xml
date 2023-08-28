@@ -8,44 +8,50 @@
     tools:context=".TriviaFragment">
 
     <TextView
-        android:id="@+id/textViewName"
-        android:layout_width="205dp"
-        android:layout_height="30dp"
+        android:id="@+id/tVName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text="Hola,..."
         android:textColor="@color/palb1"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvPregunta"
         android:layout_width="294dp"
         android:layout_height="38dp"
+        android:layout_marginTop="16dp"
         android:text="@string/QuePokemon"
         android:textColor="@color/palb2"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="389dp" />
+        app:layout_constraintTop_toBottomOf="@+id/Iv_Poke" />
 
     <RadioGroup
         android:id="@+id/radioGroupPokemon"
         android:layout_width="269dp"
         android:layout_height="222dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        app:layout_constraintEnd_toEndOf="@+id/tvPregunta"
+        app:layout_constraintStart_toStartOf="@+id/tvPregunta"
+        app:layout_constraintTop_toBottomOf="@+id/tvPregunta">
 
         <RadioButton
             android:id="@+id/radioButton"
+            style="@style/radioStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gengar"
-            style="@style/radioStyle" />
+            android:text="Gengar" />
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -75,21 +81,24 @@
         android:layout_width="145dp"
         android:layout_height="59dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="78dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/Enviar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroupPokemon"
+        app:layout_constraintStart_toStartOf="@+id/radioGroupPokemon"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupPokemon" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Iv_Poke"
         android:layout_width="333dp"
         android:layout_height="268dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:background="@color/pala1"
         android:src="@drawable/fantasmita"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tVName"
+        app:layout_constraintStart_toStartOf="@+id/tVName"
+        app:layout_constraintTop_toBottomOf="@+id/tVName"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

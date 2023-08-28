@@ -1,19 +1,20 @@
 package cl.jpvs.modulo5_ejercicio_03;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentRespuesta#newInstance} factory method to
- * create an instance of this fragment.
- */
+import cl.jpvs.modulo5_ejercicio_03.databinding.FragmentRespuestaBinding;
+
+
 public class FragmentRespuesta extends Fragment {
+    private FragmentRespuestaBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,13 +46,14 @@ public class FragmentRespuesta extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+    private boolean resultadoCorrecto = false;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam1 = getArguments().getString("nombre");
             mParam2 = getArguments().getString(ARG_PARAM2);
+            resultadoCorrecto = getArguments().getBoolean("respuesta");
         }
     }
 
@@ -59,6 +61,24 @@ public class FragmentRespuesta extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_respuesta, container, false);
+        binding = FragmentRespuestaBinding.inflate(getLayoutInflater() ,container, false);
+
+        if(resultadoCorrecto == true) {
+            binding.tvRespuesta.setTextColor(Color.BLUE);
+            binding.tvRespuesta.setText("Respuesta Correcta");
+        } else {
+            binding.tvRespuesta.setTextColor(Color.RED);
+            binding.tvRespuesta.setText("Respuesta Incorrecta");
+        }
+        binding.btIntentalo.setOnClickListener(view -> {
+            Bundle bundle = new Bundle();
+            bundle.putString("nombre",mParam1);
+            Navigation.findNavController(getView()).navigate(R.id.action_fragmentRespuesta_to_triviaFragment, bundle);
+
+        });
+
+
+
+        return binding.getRoot();
     }
 }
