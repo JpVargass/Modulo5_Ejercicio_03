@@ -4,22 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/fragmentName">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="cl.jpvs.modulo5_ejercicio_03.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/fragmentName"
         android:name="cl.jpvs.modulo5_ejercicio_03.FragmentName"
         android:label="fragment_name"
         tools:layout="@layout/fragment_name" >
         <action
-            android:id="@+id/action_fragmentName_to_fragmentTrivia"
-            app:destination="@id/fragmentTrivia" />
+            android:id="@+id/action_fragmentName_to_triviaFragment"
+            app:destination="@id/triviaFragment" />
     </fragment>
     <fragment
-        android:id="@+id/fragmentTrivia"
+        android:id="@+id/triviaFragment"
         android:name="cl.jpvs.modulo5_ejercicio_03.TriviaFragment"
         android:label="fragment_trivia"
         tools:layout="@layout/fragment_trivia" >
         <action
-            android:id="@+id/action_fragmentTrivia_to_fragmentRespuesta"
+            android:id="@+id/action_triviaFragment_to_fragmentRespuesta"
             app:destination="@id/fragmentRespuesta" />
     </fragment>
     <fragment
@@ -28,7 +34,7 @@
         android:label="fragment_respuesta"
         tools:layout="@layout/fragment_respuesta" >
         <action
-            android:id="@+id/action_fragmentRespuesta_to_fragmentTrivia"
-            app:destination="@id/fragmentTrivia" />
+            android:id="@+id/action_fragmentRespuesta_to_triviaFragment"
+            app:destination="@id/triviaFragment" />
     </fragment>
 </navigation>
